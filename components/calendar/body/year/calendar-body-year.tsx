@@ -69,8 +69,8 @@ export default function CalendarBodyYear() {
                 {format(monthDate, "MMMM")}
               </h3>
               <div className="grid grid-cols-7 gap-1 text-center text-xs font-medium text-muted-foreground">
-                {weekDays.map((day) => (
-                  <div key={day}>{day}</div>
+                {weekDays.map((day, index) => (
+                  <div key={`${day}-${index}`}>{day}</div>
                 ))}
               </div>
               <div className="mt-1 grid grid-cols-7 gap-1">
